@@ -11,7 +11,7 @@ async def read_root():
 @app.get("/ip/{ip}")
 async def get_ip(ip: str, key: Optional[str] = None):
     if key is None:
-        return {"Error": "Please provide a valid API key"}
+        return {"Error": "Please provide a valid APIkey"}
     else:
         try:
             api = Shodan(key)
